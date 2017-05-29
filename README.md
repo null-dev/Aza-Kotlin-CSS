@@ -1,6 +1,8 @@
-# AzaKotlinCSS
+# AzaKotlinCSS-JS
 
-AzaKotlinCSS is a DSL (Domain-specific language) designed for writing CSS using Kotlin – the greatest programming language in the World! :boom::fire::+1:
+AzaKotlinCSS-JS is a fork of the original [AzaKotlinCSS](https://github.com/olegcherr/Aza-Kotlin-CSS) project that supports the Kotlin Javascript runtime instead of the Kotlin JVM runtime.
+
+AzaKotlinCSS-JS aims to be 100% compatible with the original fork and will keep up to date with development in the original project.
 
 ### Installation
 
@@ -10,7 +12,7 @@ repositories {
 }
 
 dependencies {
-	compile 'azadev.kotlin:aza-kotlin-css:1.0'
+	compile 'xyz.nulldev:aza-kotlin-css-js:1.0'
 }
 ```
 

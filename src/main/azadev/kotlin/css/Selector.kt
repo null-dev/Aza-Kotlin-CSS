@@ -1,7 +1,6 @@
 package azadev.kotlin.css
 
-import java.util.*
-
+import azadev.kotlin.compat.StringBuilderCompat
 
 class Selector(
 		var stylesheet: Stylesheet
@@ -59,7 +58,7 @@ class Selector(
 			var spaceBefore: Boolean = true,
 			var spaceAfter: Boolean = true
 	) {
-		val sb = StringBuilder(str)
+		val sb = StringBuilderCompat(str)
 
 
 		fun append(str: CharSequence, _spaceBefore: Boolean, _spaceAfter: Boolean) {

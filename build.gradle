@@ -1,8 +1,9 @@
-group 'azadev.kotlin'
+group 'xyz.nulldev'
 version library_version
 
 buildscript {
 	repositories {
+		mavenCentral()
 		jcenter()
 	}
 	dependencies {
@@ -10,9 +11,10 @@ buildscript {
 	}
 }
 
-apply plugin: 'kotlin'
+apply plugin: 'kotlin2js'
 
 repositories {
+	mavenCentral()
 	jcenter()
 }
 
@@ -22,7 +24,7 @@ sourceSets {
 }
 
 dependencies {
-	compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+	compile "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
 
 	testCompile "junit:junit:$junit_version"
 }
@@ -40,8 +42,8 @@ publishing {
 	publications {
 		MyPublication(MavenPublication) {
 			from components.java
-			groupId 'azadev.kotlin'
-			artifactId 'aza-kotlin-css'
+			groupId 'xyz.nulldev'
+			artifactId 'aza-kotlin-css-js'
 			version library_version
 
 			artifact sourceJar {

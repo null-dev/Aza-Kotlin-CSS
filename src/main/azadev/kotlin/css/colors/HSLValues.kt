@@ -1,5 +1,7 @@
 package azadev.kotlin.css.colors
 
+import kotlin.js.Math
+
 
 class HSLValues(
 		var hue: Float,

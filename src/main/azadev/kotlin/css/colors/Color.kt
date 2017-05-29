@@ -2,7 +2,9 @@
 
 package azadev.kotlin.css.colors
 
+import azadev.kotlin.compat.Integer
 import azadev.kotlin.css.cssDecimalFormat
+import kotlin.js.Math
 
 
 class Color(

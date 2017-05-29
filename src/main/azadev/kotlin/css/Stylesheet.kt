@@ -1,8 +1,6 @@
 package azadev.kotlin.css
 
-import java.io.File
-import java.util.*
-
+import azadev.kotlin.compat.StringBuilderCompat
 
 // CSS Selector Reference
 // http://www.w3schools.com/cssref/css_selectors.asp
@@ -58,16 +56,10 @@ class Stylesheet(
 	}
 
 
-	fun render() = buildString { render(this) }
-	fun renderTo(sb: StringBuilder) = render(sb)
+	fun render() = azadev.kotlin.compat.buildString { render(this) }
+	fun renderTo(sb: StringBuilderCompat) = render(sb)
 
-	fun renderToFile(file: File) {
-		file.delete()
-		file.writeText(render()) // "writeText" is a really clever helper
-	}
-	fun renderToFile(path: String) = renderToFile(File(path))
-
-	private fun render(sb: StringBuilder, selectorPrefix: CharSequence = "", _spaceBefore: Boolean = true) {
+	private fun render(sb: StringBuilderCompat, selectorPrefix: CharSequence = "", _spaceBefore: Boolean = true) {
 		val selector = selector
 		val atRule = atRule
 
@@ -96,7 +88,7 @@ class Stylesheet(
 							append(";")
 					}
 				else if (i == lastIdx && sb.last() == ';')
-					sb.setLength(sb.length-1)
+					sb.length--
 			}
 
 			if (hasSelector)

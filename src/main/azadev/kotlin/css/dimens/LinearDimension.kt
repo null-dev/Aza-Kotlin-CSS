@@ -22,7 +22,7 @@ class LinearDimension(
 				is Number -> value.px
 				is String -> fromString(value)
 				is LinearDimension -> value
-				else -> throw IllegalArgumentException("Cannot create LinearDimension from ${value.javaClass.simpleName}")
+				else -> throw IllegalArgumentException("Cannot create LinearDimension from ${value::class.simpleName}")
 			}
 		}
 
