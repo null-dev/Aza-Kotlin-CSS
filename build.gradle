@@ -29,6 +29,11 @@ dependencies {
 	testCompile "junit:junit:$junit_version"
 }
 
+compileKotlin2Js {
+	kotlinOptions {
+		moduleKind = "umd"
+	}
+}
 
 // PUBLISHING
 
