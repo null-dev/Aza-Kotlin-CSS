@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-	compile 'xyz.nulldev:aza-kotlin-css-js:1.0'
+	compile 'xyz.nulldev:aza-kotlin-css-js:1.01'
 }
 ```
 
