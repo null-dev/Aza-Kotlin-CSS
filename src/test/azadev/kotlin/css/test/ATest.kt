@@ -1,7 +1,7 @@
 package azadev.kotlin.css.test
 
 import azadev.kotlin.css.Stylesheet
-import org.junit.Assert.*
+import kotlin.test.assertEquals
 
 
 interface ATest

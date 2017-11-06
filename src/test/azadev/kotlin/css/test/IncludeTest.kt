@@ -1,12 +1,13 @@
 package azadev.kotlin.css.test
 
 import azadev.kotlin.css.*
-import org.junit.*
+import kotlin.test.Test
 
 
 class IncludeTest : ATest
 {
-	@Test fun basic() {
+	@Test
+	fun basic() {
 		val css1 = Stylesheet {
 			a { color = 0xffffff }
 		}

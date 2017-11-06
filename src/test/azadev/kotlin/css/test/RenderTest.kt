@@ -3,8 +3,8 @@ package azadev.kotlin.css.test
 import azadev.kotlin.css.*
 import azadev.kotlin.css.colors.*
 import azadev.kotlin.css.dimens.*
-import org.junit.*
-import org.junit.Assert.*
+import kotlin.test.Test
+import kotlin.test.assertEquals
 
 
 // CSS Selectors:
@@ -12,7 +12,8 @@ import org.junit.Assert.*
 
 class RenderTest : ATest
 {
-	@Test fun selectors() {
+	@Test
+	fun selectors() {
 		testRender("", {
 			div {}
 		})
